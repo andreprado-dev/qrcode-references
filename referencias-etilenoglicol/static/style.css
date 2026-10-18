@@ -1,0 +1,25 @@
+:root{--bg:#f4f7fa;--card:#fff;--ink:#14202b;--mute:#566474;--line:#d6dee6;--blue:#1f4e79;--acc:#b85a14;--accbg:#fdeee0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a24;--card:#17242f;--ink:#e8eef4;--mute:#9db0c1;--line:#2b3b49;--blue:#8fbbe3;--acc:#f0a265;--accbg:#2e2218}}
+:root[data-theme="dark"]{--bg:#0f1a24;--card:#17242f;--ink:#e8eef4;--mute:#9db0c1;--line:#2b3b49;--blue:#8fbbe3;--acc:#f0a265;--accbg:#2e2218}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);background:var(--bg);color:var(--ink);font:400 17px/1.55 "Source Serif 4",Georgia,"Times New Roman",serif}
+main{max-width:720px;margin:0 auto;padding:28px 18px 48px}
+h1{font-weight:700;font-size:1.85rem;line-height:1.2;margin:0 0 8px;color:var(--blue)}
+.sub{font:400 1rem/1.5 "Source Sans 3",system-ui,sans-serif;color:var(--mute);margin:0 0 22px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:8px 0 12px}
+input{width:100%;font:400 1rem "Source Sans 3",system-ui,sans-serif;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px}
+input:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.count{font:400 .9rem "Source Sans 3",system-ui,sans-serif;color:var(--mute);margin:8px 2px 0}
+ol{list-style:none;margin:0;padding:0}
+li{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:6px;padding:14px 16px 14px 18px;margin:0 0 12px}
+li[hidden]{display:none}
+li p{margin:0 0 10px;font-size:.98rem;line-height:1.55;padding-left:1.1em;text-indent:-1.1em}
+li b{font-weight:600}
+.acts{display:flex;flex-wrap:wrap;gap:8px;font-family:"Source Sans 3",system-ui,sans-serif}
+.acts a,.acts button{font:600 .95rem "Source Sans 3",system-ui,sans-serif;text-decoration:none;cursor:pointer;border-radius:8px;padding:9px 14px;min-height:40px;display:inline-flex;align-items:center}
+.acts a{background:var(--accbg);color:var(--acc);border:1.5px solid var(--acc)}
+.acts button{background:transparent;color:var(--blue);border:1.5px solid var(--line)}
+.none{font:400 .9rem "Source Sans 3",system-ui,sans-serif;color:var(--mute);padding:9px 0}
+.empty{font:400 1rem "Source Sans 3",system-ui,sans-serif;color:var(--mute);padding:20px 4px}
+footer{font:400 .95rem "Source Sans 3",system-ui,sans-serif;color:var(--mute);border-top:1px solid var(--line);margin-top:26px;padding-top:16px}

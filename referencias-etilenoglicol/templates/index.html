@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Referências: intoxicação por etilenoglicol</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<main>
+<h1>Referências: intoxicação por etilenoglicol</h1>
+<p class="sub">Toque em “Abrir” para ir direto ao artigo ou documento. Use a busca para filtrar por autor, ano ou revista.</p>
+<div class="bar">
+<input id="q" type="search" placeholder="Buscar por autor, ano ou revista" aria-label="Buscar referências" autocomplete="off">
+<p class="count" id="count" aria-live="polite"></p>
+</div>
+<ol id="list">
+{% for r in refs %}
+<li>
+<p>{{ r.t | safe }}</p>
+<div class="acts">
+{% if r.u %}
+<a href="{{ r.u }}" target="_blank" rel="noopener noreferrer">{{ r.l }}</a>
+{% else %}
+<span class="none">Livro impresso, sem link online</span>
+{% endif %}
+<button type="button" class="copy">Copiar referência</button>
+</div>
+</li>
+{% endfor %}
+</ol>
+<p class="empty" id="empty" hidden>Nenhuma referência encontrada. Tente outro termo.</p>
+<footer>Trabalho revisado pela Professora Jandra Pacheco dos Santos.</footer>
+</main>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
